@@ -6,27 +6,26 @@ const api = {
   key: "1b5a3319844b88508ae229aa7685bbd2",
   base: "https://api.openweathermap.org/data/2.5/",
 };
-
+const ICON_URL = 'http://openweathermap.org/img/wn/';
 
 function App() {
-  const ICON_URL = 'http://openweathermap.org/img/wn/';
   const [search, setSearch] = useState('');
   const [weather, setWeather] = useState({});
   const searchPressed = () => {
-   fetch(`${api.base}weather?q=${search}&units=metric&APPID=${api.key}`)
-   .then((response) => response.json())
-   .then((result) => {
-    console.log(result);
-    setWeather(result);
-   });
+    fetch(`${api.base}weather?q=${search}&units=metric&APPID=${api.key}`)
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+      setWeather(result);
+    });
   };
 
   return (
     <div className="App">
       <header className="App-header">
 
-        {/* Header */}
-       <h1>Weather</h1>
+      {/* Header */}
+      <h1>Weather</h1>
 
         {/* Search Box */} {/* Placeholder text */}
         <div>
@@ -61,7 +60,7 @@ function App() {
 
         </div>
 
-        ) : (
+      ) : (
         ""
       )}
 
