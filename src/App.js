@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from 'react';
 
 const api = {
-  key: "1b5a3319844b88508ae229aa7685bbd2",
+  key: "",
   base: "https://api.openweathermap.org/data/2.5/",
 };
 const ICON_URL = 'http://openweathermap.org/img/wn/';
